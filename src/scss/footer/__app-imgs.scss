@@ -1,0 +1,26 @@
+.footer {
+    &__app-imgs {
+        position: relative;
+        height: 136px;
+        flex: 1 1 auto;
+
+        &::after {
+            content: "";
+            background: url(../img/app-imgs.png) no-repeat;
+            background-size: 394px;
+            position: absolute;
+            width: 394px;
+            height: 215px;
+            bottom: 0;
+            left: 0;
+
+            @include max-screen($md) {
+                background-size: 197px;
+                width: 197px;
+                height: 107px;
+                bottom: 0;
+                left: calc(50% - 98.5px);
+            }
+        }
+    }
+}

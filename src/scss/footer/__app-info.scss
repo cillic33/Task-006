@@ -1,0 +1,16 @@
+.footer {
+    &__app-info {
+        display: flex;
+        align-items: center;
+
+        @include max-screen($container-width) {
+            flex-wrap: wrap;
+            width: 50%;
+            text-align: center;
+
+            > div {
+                width: 100%;
+            }
+        }
+    }
+}

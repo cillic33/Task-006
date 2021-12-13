@@ -1,0 +1,52 @@
+.header {
+    &__cart {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        @include max-screen($sm) {
+            position: relative;
+        }
+    }
+
+    &__cart-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $default-link-color;
+
+        @include max-screen($sm) {
+            font-size: 0;
+        }
+
+        &::before {
+            content: url('../img/cart-icon.svg');
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 10.18px 0 0;
+
+            @include max-screen($sm) {
+                padding: 0;
+            }
+        }
+    }
+
+    &__cart-count {
+        font-size: 14px;
+        font-weight: 500;
+        background: $default-link-color;
+        border-radius: 50%;
+        width: 21px; 
+        height: 21px;
+        color: #ffffff;
+        margin: 0 0 0 8px;
+        text-align: center;
+        line-height: 1.5;
+
+        @include max-screen($sm) {
+            position: absolute;
+            margin: 0;
+            top: 0;
+            right: -10px;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.footer {
+    &__line2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 47px;
+        padding-bottom: 39px;
+
+        > div:last-child {
+            padding-right: 113px;
+        }
+
+        @include max-screen($container-width) {
+            max-width: 800px;
+
+            > div:last-child {
+                padding-right: 0;
+            }
+        }
+
+        @include max-screen($md) {
+            flex-wrap: wrap;
+
+            > div {
+                width: 100%;
+                padding: 20px 0;
+            }
+        }
+    }
+}

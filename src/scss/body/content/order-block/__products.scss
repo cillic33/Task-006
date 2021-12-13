@@ -1,0 +1,102 @@
+.order-block {
+    &__products {
+        padding: 64px 0 0 0;
+
+        @include max-screen($mmd) {
+            padding: 24px 0 0 0;
+        }
+    }
+    
+    &__products-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px 0;
+        margin: 0 40px 0 37px;
+        border-bottom: 1px solid rgba(196, 196, 196, .3);
+
+        @include max-screen($mmd) {
+            flex-wrap: wrap;
+            padding: 10px 0;
+            margin: 0 20px;
+
+            > div {
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+            }
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__products-row-img {
+        width: 121px;
+        margin: 0 20px 0 0;
+
+        img {
+            width: 100%;
+            max-width: 97px;
+            height: auto;
+        }
+    }
+
+    &__products-row-info {
+        flex: 1 1 auto;
+    }
+
+    &__products-row-price {
+        font-size: 22px;
+        font-weight: 500;
+        color: $default-font-color;
+        padding: 0 0 0 20px;
+        white-space: nowrap;
+        width: 100px;
+        text-align: right;
+    }
+
+    &__products-row-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: $default-font-color;
+    }
+
+    &__products-row-docs {
+        margin-top: 12.05px;
+    }
+
+    &__products-row-doc {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 13px;
+        font-weight: 500;
+        color: $second-link-color;
+    }
+
+    &__products-row-dot {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px;
+    }
+
+    &__products-row-note {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff;
+        padding: 6px 12px;
+        background: #C1C4C7;
+        border-radius: 5px;
+        margin-top: 11.95px;
+    }
+}
+
+.order-block_closed {
+    .order-block {
+        &__products {
+            display: none;
+        }
+    }
+}

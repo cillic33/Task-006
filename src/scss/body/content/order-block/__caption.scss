@@ -1,0 +1,76 @@
+.order-block {
+    &__caption {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 40px 12px;
+        margin-top: -7px;
+        border-radius: 10px 10px 0 0;
+
+        @include max-screen($mmd) {
+            flex-wrap: wrap;
+            padding: 20px 20px 12px;
+        }
+
+        > div {
+            @include max-screen($mmd) {
+                width: 100%;
+                padding: 0 0 20px 0;
+            }
+        }
+    }
+
+    &__delivery-title-text {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        font-weight: 700;
+        color: $default-font-color;
+        padding: 0 18.12px 0 0;
+    }
+
+    &__contact-us {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 7px 28.76px;
+    }
+
+    &__delivery-number {
+        font-size: 18px;
+        font-weight: 600;
+        color: $default-link-color;
+        padding: 4px 0 0 0;
+    }
+
+    &__caption-right {
+        text-align: right;
+
+        @include max-screen($mmd) {
+            text-align: left;
+        }
+    }
+
+    &__pay-status {
+        font-size: 17px;
+        font-weight: 500;
+        color: $default-font-color;
+    }
+
+    &__pay-total {
+        font-size: 24px;
+        font-weight: 700;
+        color: $default-font-color;
+        padding: 1px 0 0 0;
+    }
+}
+
+.order-block_closed {
+    border-radius: 5px;
+
+    .order-block {
+        &__caption {
+            background: #fafafa;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.footer {
+    &__app-text {
+        font-size: 26px;
+        font-weight: 500;
+        color: #ffffff;
+
+        @include max-screen($container-width) {
+            font-size: 21px;
+        }
+        @include max-screen($md) {
+            padding: 30px 0 20px;
+        }
+    }
+}

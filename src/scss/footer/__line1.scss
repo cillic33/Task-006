@@ -1,0 +1,19 @@
+.footer {
+    &__line1 {
+        background: linear-gradient(to right, $second-link-color-light, $default-link-color);
+    }
+
+    &__line1-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include max-screen($md) {
+            flex-wrap: wrap;
+            
+            > div {
+                width: 100%;
+            }
+        }
+    }
+}

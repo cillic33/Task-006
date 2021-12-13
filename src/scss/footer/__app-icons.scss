@@ -1,0 +1,21 @@
+.footer {
+    &__app-icons {
+        display: flex;
+        justify-content: center;
+        padding: 0 47.97px;
+
+        @include max-screen($container-width) {
+            padding: 0;
+        }
+    }
+
+    &__app-icon {
+        width: 100%;
+        max-width: 157.77px;
+        padding: 0 7.22px;
+
+        @include max-screen($container-width) {
+            padding-top: 10px;
+        }
+    }
+}

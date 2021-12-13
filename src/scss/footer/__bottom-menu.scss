@@ -1,0 +1,29 @@
+.footer {
+    &__bottom-menu {
+        display: flex;
+
+        @include max-screen($md) {
+            flex-direction: column;
+        }
+    }
+
+    &__bottom-menu-item {
+        font-size: 14px;
+        color: #888888;
+        padding: 0 24px 0 0;
+
+        @include max-screen($md) {
+            padding: 10px 0 !important;
+            text-align: center;
+        }
+
+        &_dim {
+            opacity: .5;
+        }
+    
+        &:last-child {
+            padding: 0;
+        }
+
+    }
+}

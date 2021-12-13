@@ -1,0 +1,17 @@
+.footer {
+    &__line3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 39px;
+        padding-bottom: 29px;
+
+        @include max-screen($container-width) {
+            max-width: 800px;
+        }
+
+        @include max-screen($md) {
+            flex-direction: column;
+        }
+    }
+}

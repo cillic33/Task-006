@@ -1,0 +1,44 @@
+.header {
+    &__catalog {
+        @include max-screen($md) {
+            flex: 1 1 auto;
+        }
+        @include max-screen($mmd) {
+            display: none;
+        }
+    }
+
+    &__catalog-title {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        width: 167px;
+        height: 50px;
+        background: linear-gradient(to right, $second-link-color-light, $default-link-color);
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            width: 12px;
+            height: 6px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 0 13.5px;
+            background: url('../img/chevron-white-down.svg') no-repeat center;
+            background-size: 12px;
+        }
+
+        &_active {
+            &::after {
+                background: url('../img/chevron-white-up.svg') no-repeat center;
+                background-size: 12px;
+            }
+        }
+
+
+    }
+}

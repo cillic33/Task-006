@@ -1,0 +1,62 @@
+.footer {
+
+    &__menu-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $default-font-color;
+        padding-bottom: 24px;
+
+        @include max-screen($md) {
+            text-align: center;
+        }
+    }
+
+    &__menu-wrap {
+        display: flex;
+        align-items: flex-start;
+
+        @include max-screen($md) {
+            justify-content: center;
+        }
+        @include max-screen($sm) {
+            flex-direction: column;
+            align-items: center;
+
+            > div {
+                width: 180px;
+            }
+        }
+    }
+
+    &__menu-block {
+        padding-right: 62px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        @include max-screen($sm) {
+            padding-right: 0;
+        }
+    }
+
+    &__menu-item {
+        display: block;
+        font-size: 14px;
+        color: #888888;
+        padding: 10px 0;
+        cursor: pointer;
+
+        @include max-screen($sm) {
+            text-align: center;
+        }
+
+        &_active {
+            color: $second-link-color;
+        }
+
+        &:hover {
+            color: $default-link-color-hover;
+        }
+    }
+}

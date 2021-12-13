@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG stack preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-bars-solid-dims { width: 448px; height: 512px; }
+	.svg-bars-solid-active-dims { width: 448px; height: 512px; }
+	.svg-cart-icon-dims { width: 29px; height: 33px; }
+	.svg-chevron-down-solid-dims { width: 448px; height: 512px; }
+	.svg-chevron-down-solid-hover-dims { width: 448px; height: 512px; }
+	.svg-chevron-more-down-dims { width: 21px; height: 12px; }
+	.svg-chevron-more-down-hover-dims { width: 21px; height: 12px; }
+	.svg-chevron-more-up-dims { width: 21px; height: 12px; }
+	.svg-chevron-more-up-hover-dims { width: 21px; height: 12px; }
+	.svg-chevron-up-solid-dims { width: 448px; height: 512px; }
+	.svg-chevron-up-solid-hover-dims { width: 448px; height: 512px; }
+	.svg-chevron-white-down-dims { width: 14px; height: 9px; }
+	.svg-chevron-white-up-dims { width: 14px; height: 9px; }
+	.svg-dot-dims { width: 4px; height: 5px; }
+	.svg-logo-dims { width: 38px; height: 40px; }
+	.svg-person-dims { width: 17px; height: 18px; }
+	.svg-person-hover-dims { width: 17px; height: 18px; }
+	.svg-phone-dims { width: 19px; height: 20px; }
+	.svg-phone-hover-dims { width: 19px; height: 20px; }
+	.svg-scheme-icon-1-dims { width: 24px; height: 24px; }
+	.svg-scheme-icon-2-dims { width: 24px; height: 24px; }
+	.svg-scheme-icon-3-dims { width: 14px; height: 24px; }
+	.svg-scheme-icon-4-dims { width: 26px; height: 26px; }
+	.svg-scheme-line-gray-dims { width: 634px; height: 3px; }
+	.svg-scheme-line-green-dims { width: 428px; height: 3px; }
+	.svg-search-icon-dims { width: 23px; height: 23px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG stack preview</h1>
+			<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+				<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+
+-->
+
+			<ul>
+
+				<li title="bars-solid">
+					<div class="icon-box">
+
+						<!-- bars-solid -->
+						<img src="../icons/icons.svg#bars-solid" class="svg-bars-solid-dims" alt="bars-solid"/>
+
+					</div>
+					<h2>bars-solid</h2>
+				</li>
+				<li title="bars-solid-active">
+					<div class="icon-box">
+
+						<!-- bars-solid-active -->
+						<img src="../icons/icons.svg#bars-solid-active" class="svg-bars-solid-active-dims" alt="bars-solid-active"/>
+
+					</div>
+					<h2>bars-solid-active</h2>
+				</li>
+				<li title="cart-icon">
+					<div class="icon-box">
+
+						<!-- cart-icon -->
+						<img src="../icons/icons.svg#cart-icon" class="svg-cart-icon-dims" alt="cart-icon"/>
+
+					</div>
+					<h2>cart-icon</h2>
+				</li>
+				<li title="chevron-down-solid">
+					<div class="icon-box">
+
+						<!-- chevron-down-solid -->
+						<img src="../icons/icons.svg#chevron-down-solid" class="svg-chevron-down-solid-dims" alt="chevron-down-solid"/>
+
+					</div>
+					<h2>chevron-down-solid</h2>
+				</li>
+				<li title="chevron-down-solid-hover">
+					<div class="icon-box">
+
+						<!-- chevron-down-solid-hover -->
+						<img src="../icons/icons.svg#chevron-down-solid-hover" class="svg-chevron-down-solid-hover-dims" alt="chevron-down-solid-hover"/>
+
+					</div>
+					<h2>chevron-down-solid-hover</h2>
+				</li>
+				<li title="chevron-more-down">
+					<div class="icon-box">
+
+						<!-- chevron-more-down -->
+						<img src="../icons/icons.svg#chevron-more-down" class="svg-chevron-more-down-dims" alt="chevron-more-down"/>
+
+					</div>
+					<h2>chevron-more-down</h2>
+				</li>
+				<li title="chevron-more-down-hover">
+					<div class="icon-box">
+
+						<!-- chevron-more-down-hover -->
+						<img src="../icons/icons.svg#chevron-more-down-hover" class="svg-chevron-more-down-hover-dims" alt="chevron-more-down-hover"/>
+
+					</div>
+					<h2>chevron-more-down-hover</h2>
+				</li>
+				<li title="chevron-more-up">
+					<div class="icon-box">
+
+						<!-- chevron-more-up -->
+						<img src="../icons/icons.svg#chevron-more-up" class="svg-chevron-more-up-dims" alt="chevron-more-up"/>
+
+					</div>
+					<h2>chevron-more-up</h2>
+				</li>
+				<li title="chevron-more-up-hover">
+					<div class="icon-box">
+
+						<!-- chevron-more-up-hover -->
+						<img src="../icons/icons.svg#chevron-more-up-hover" class="svg-chevron-more-up-hover-dims" alt="chevron-more-up-hover"/>
+
+					</div>
+					<h2>chevron-more-up-hover</h2>
+				</li>
+				<li title="chevron-up-solid">
+					<div class="icon-box">
+
+						<!-- chevron-up-solid -->
+						<img src="../icons/icons.svg#chevron-up-solid" class="svg-chevron-up-solid-dims" alt="chevron-up-solid"/>
+
+					</div>
+					<h2>chevron-up-solid</h2>
+				</li>
+				<li title="chevron-up-solid-hover">
+					<div class="icon-box">
+
+						<!-- chevron-up-solid-hover -->
+						<img src="../icons/icons.svg#chevron-up-solid-hover" class="svg-chevron-up-solid-hover-dims" alt="chevron-up-solid-hover"/>
+
+					</div>
+					<h2>chevron-up-solid-hover</h2>
+				</li>
+				<li title="chevron-white-down">
+					<div class="icon-box">
+
+						<!-- chevron-white-down -->
+						<img src="../icons/icons.svg#chevron-white-down" class="svg-chevron-white-down-dims" alt="chevron-white-down"/>
+
+					</div>
+					<h2>chevron-white-down</h2>
+				</li>
+				<li title="chevron-white-up">
+					<div class="icon-box">
+
+						<!-- chevron-white-up -->
+						<img src="../icons/icons.svg#chevron-white-up" class="svg-chevron-white-up-dims" alt="chevron-white-up"/>
+
+					</div>
+					<h2>chevron-white-up</h2>
+				</li>
+				<li title="dot">
+					<div class="icon-box">
+
+						<!-- dot -->
+						<img src="../icons/icons.svg#dot" class="svg-dot-dims" alt="dot"/>
+
+					</div>
+					<h2>dot</h2>
+				</li>
+				<li title="logo">
+					<div class="icon-box">
+
+						<!-- logo -->
+						<img src="../icons/icons.svg#logo" class="svg-logo-dims" alt="logo"/>
+
+					</div>
+					<h2>logo</h2>
+				</li>
+				<li title="person">
+					<div class="icon-box">
+
+						<!-- person -->
+						<img src="../icons/icons.svg#person" class="svg-person-dims" alt="person"/>
+
+					</div>
+					<h2>person</h2>
+				</li>
+				<li title="person-hover">
+					<div class="icon-box">
+
+						<!-- person-hover -->
+						<img src="../icons/icons.svg#person-hover" class="svg-person-hover-dims" alt="person-hover"/>
+
+					</div>
+					<h2>person-hover</h2>
+				</li>
+				<li title="phone">
+					<div class="icon-box">
+
+						<!-- phone -->
+						<img src="../icons/icons.svg#phone" class="svg-phone-dims" alt="phone"/>
+
+					</div>
+					<h2>phone</h2>
+				</li>
+				<li title="phone-hover">
+					<div class="icon-box">
+
+						<!-- phone-hover -->
+						<img src="../icons/icons.svg#phone-hover" class="svg-phone-hover-dims" alt="phone-hover"/>
+
+					</div>
+					<h2>phone-hover</h2>
+				</li>
+				<li title="scheme-icon-1">
+					<div class="icon-box">
+
+						<!-- scheme-icon-1 -->
+						<img src="../icons/icons.svg#scheme-icon-1" class="svg-scheme-icon-1-dims" alt="scheme-icon-1"/>
+
+					</div>
+					<h2>scheme-icon-1</h2>
+				</li>
+				<li title="scheme-icon-2">
+					<div class="icon-box">
+
+						<!-- scheme-icon-2 -->
+						<img src="../icons/icons.svg#scheme-icon-2" class="svg-scheme-icon-2-dims" alt="scheme-icon-2"/>
+
+					</div>
+					<h2>scheme-icon-2</h2>
+				</li>
+				<li title="scheme-icon-3">
+					<div class="icon-box">
+
+						<!-- scheme-icon-3 -->
+						<img src="../icons/icons.svg#scheme-icon-3" class="svg-scheme-icon-3-dims" alt="scheme-icon-3"/>
+
+					</div>
+					<h2>scheme-icon-3</h2>
+				</li>
+				<li title="scheme-icon-4">
+					<div class="icon-box">
+
+						<!-- scheme-icon-4 -->
+						<img src="../icons/icons.svg#scheme-icon-4" class="svg-scheme-icon-4-dims" alt="scheme-icon-4"/>
+
+					</div>
+					<h2>scheme-icon-4</h2>
+				</li>
+				<li title="scheme-line-gray">
+					<div class="icon-box">
+
+						<!-- scheme-line-gray -->
+						<img src="../icons/icons.svg#scheme-line-gray" class="svg-scheme-line-gray-dims" alt="scheme-line-gray"/>
+
+					</div>
+					<h2>scheme-line-gray</h2>
+				</li>
+				<li title="scheme-line-green">
+					<div class="icon-box">
+
+						<!-- scheme-line-green -->
+						<img src="../icons/icons.svg#scheme-line-green" class="svg-scheme-line-green-dims" alt="scheme-line-green"/>
+
+					</div>
+					<h2>scheme-line-green</h2>
+				</li>
+				<li title="search-icon">
+					<div class="icon-box">
+
+						<!-- search-icon -->
+						<img src="../icons/icons.svg#search-icon" class="svg-search-icon-dims" alt="search-icon"/>
+
+					</div>
+					<h2>search-icon</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Mon, 13 Dec 2021 11:00:00 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

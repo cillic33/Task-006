@@ -1,0 +1,53 @@
+@import
+	'base/css-reset.scss',
+	'base/variables.scss',
+	'base/mixins.scss',
+	'base/global.scss',
+
+	'common/_contact-us',
+
+	'header/dropout.scss',
+	'header/_geo-dropout',
+	'header/_person-dropout',
+	'header/_line1',
+	'header/_line2',
+	'header/_menu-bars',
+	'header/_menu',
+	'header/_menu-content',
+	'header/_phone-person',
+	'header/_person',
+	'header/_phone',
+	'header/_logo',
+	'header/_catalog',
+	'header/_catalog-content',
+	'header/_search',
+	'header/_cart',
+
+	'body/_body',
+	
+	'body/aside/_aside',
+	'body/aside/_userpic',
+	'body/aside/_username',
+	'body/aside/_usermenu',
+	
+	'body/content/_content',
+	'body/content/order-block/_order-block',
+	'body/content/order-block/_caption',
+	'body/content/order-block/_info',
+	'body/content/order-block/_scheme',
+	'body/content/order-block/_products',
+	'body/content/order-block/_preview',
+	'body/content/order-block/_more',
+	
+	'footer/_footer',
+	'footer/_line1',
+	'footer/_line2',
+	'footer/_line3',
+	'footer/_app-info',
+	'footer/_app-text',
+	'footer/_app-icons',
+	'footer/_app-imgs',
+	'footer/_menu',
+	'footer/_contact-us',
+	'footer/_bottom-menu';
+	

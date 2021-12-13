@@ -1,0 +1,15 @@
+.order-block {
+    &__preview {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 26px 38px 20px;
+    }
+
+    &__preview-img {
+        width: 65px;
+        height: auto;
+        margin: 0 12px;
+    }
+}

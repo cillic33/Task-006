@@ -1,0 +1,18 @@
+.header {
+    &__phone {
+        padding: 0 22px 0 0;
+
+        @include max-screen($sm) {
+            display: none;
+        }
+    }
+    &__phone-link {
+        font-size: 18px;
+        color: #000;
+    }
+    &__phone-text {
+        font-size: 12px;
+        color: #000;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,9 @@
+.dropout {
+    display:none;
+    position: absolute;
+    background: $default-bg;
+    box-shadow: 0 0 4px $default-shadow;
+    border-radius: 4px;
+    width: auto;
+    z-index: 2;
+}

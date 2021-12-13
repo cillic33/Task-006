@@ -1,0 +1,42 @@
+.order-block {
+    &__more {
+        background: #fafafa;
+        border-radius: 0 0 5px 5px;
+        padding: 10px 0;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        color: $default-link-color;
+        cursor: pointer;
+
+        &::after {
+            content: url(../img/chevron-more-down.svg);
+            width: 18px;
+            height: 9px;
+        }
+
+        &:hover {
+            color: $default-link-color-hover;
+
+            &::after {
+                content: url(../img/chevron-more-down-hover.svg);
+            }
+        }
+
+        &_active {
+            border-radius: 0;
+
+            &::after {
+                content: url(../img/chevron-more-up.svg);
+            }
+        }
+
+        &_active {
+            &:hover {
+                &::after {
+                    content: url(../img/chevron-more-up-hover.svg);
+                }
+            }
+        }
+    }
+}

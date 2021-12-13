@@ -1,0 +1,8 @@
+.footer {
+    &__contact-us {
+        @include max-screen($md) {
+            padding-bottom: 10px;
+            display: block;
+        }
+    }
+}

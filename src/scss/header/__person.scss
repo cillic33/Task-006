@@ -1,0 +1,41 @@
+.header {
+    &__person {
+        color: $default-link-color;
+        position: relative;
+
+        &::before {
+            content: url(../img/person.svg);
+            width: 16.56px;
+            position: absolute;
+            left: 0;
+        }
+
+        &_dropdown {
+            background: url(../img/chevron-down-solid.svg) no-repeat right 0 top 5px;
+            background-size: 10px;
+            padding: 0 18px 0 25px;
+            cursor: pointer;
+
+            &:hover {
+                background: url(../img/chevron-down-solid-hover.svg) no-repeat right 0 top 5px;
+                background-size: 10px;
+
+                &::before {
+                    content: url(../img/person-hover.svg);
+                }
+            }
+        }
+
+        &_active {
+            background: url(../img/chevron-up-solid.svg) no-repeat right 0 top 5px;
+            background-size: 10px;
+
+            &:hover {
+                background: url(../img/chevron-up-solid-hover.svg) no-repeat right 0 top 5px;
+                background-size: 10px;
+            }
+        }
+
+
+    }
+}

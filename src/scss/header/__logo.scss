@@ -1,0 +1,23 @@
+.header {
+    &__logo {
+        display: flex;
+        margin: 0 26px 0 0;
+    }
+
+    &__logo-img {
+        height: 40px;
+    }
+
+    &__logo-text {
+        color: $second-link-color;
+        padding: 0 0 0 9.21px;
+        font-family: $second-font-family;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 22.26px;
+
+        span {
+            color: $default-link-color;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+.order-block {
+    &__scheme {
+        display: flex;
+        justify-content: space-around;
+        background: rgb(243, 243, 243, .3);
+        padding: 32px 0 24px;
+        margin: 33px 0 0 0;
+
+        @include max-screen($mmd) {
+            flex-wrap: wrap;
+            padding: 22px 20px 14px;
+            margin: 20px 0 0 0;
+        }
+    }
+
+    &__scheme-item {
+        flex: 1 1 auto;
+
+        @include max-screen($mmd) {
+            width: 50%;
+            margin: 10px 0;
+        }
+        
+        &_first {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 50% !important;
+                height: 100%;
+                background: url('../img/scheme-line-gray.svg') repeat-x top 25px center;
+                right: 0;
+                top: 0;
+                z-index: 0;
+            }
+        }
+
+        &_active {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: url('../img/scheme-line-green.svg') repeat-x top 25px center;
+                top: 0;
+                z-index: 0;
+            }
+        }
+
+        &_crossing {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background: url('../img/scheme-line-green.svg') repeat-x top 25px center;
+                left: 0;
+                top: 0;
+                z-index: 0;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background: url('../img/scheme-line-gray.svg') repeat-x top 25px center;
+                right: 0;
+                top: 0;
+                z-index: 0;
+            }
+        }
+
+        &_last {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                background: url('../img/scheme-line-gray.svg') repeat-x top 25px center;
+                left: 0;
+                top: 0;
+                z-index: 0;
+            }
+        }
+    }
+
+    &__scheme-icon {
+        display: table;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+
+        div {
+            display: table-cell;
+            width: 54px;
+            height: 54px;
+            background: #DDDFE0;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        &_active {
+            div {
+                background: $second-link-color;
+            }
+        }
+    }
+
+    &__scheme-text {
+        font-size: 17px;
+        font-weight: 500;
+        color: #8A8C94;
+        padding: 9px 0 0 0;
+        text-align: center;
+
+        &_active {
+            color: $second-link-color;
+        }
+    }
+}

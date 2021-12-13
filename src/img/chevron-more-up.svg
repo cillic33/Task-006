@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 12" width="21" height="12">
+	<title>chevron-more-down-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.s0 { fill: none;stroke: #8168F0;stroke-width: 2 } 
+	</style>
+	<path id="Layer" class="s0" d="m1.5 10.5l9-9l9 9" />
+</svg>
