@@ -28,6 +28,14 @@
                 padding: 0;
             }
         }
+
+        &:hover {
+            color: $default-link-color-hover;
+
+            &::before {
+                content: url('../img/cart-icon-hover.svg');
+            }
+        }
     }
 
     &__cart-count {

@@ -1,0 +1,1 @@
+https://www.figma.com/file/YcjeSL7Av9qw6TyWDXaZJz/%D0%9C%D0%B0%D0%BA%D0%B5%D1%82?node-id=2%3A357
