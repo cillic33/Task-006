@@ -18,9 +18,9 @@
 			<div class="container">
 				<div class="header__line1">
 					<div class="header__menu">
-						<div class="header__menu-bars header__menu-bars_dropdown" onClick="toggleHeaderMenuDropout(this)"></div>
+						<div class="header__menu-bars header__menu-bars_dropdown" onClick="toggleDropout(this)" data-class-dropout="header__menu-content"></div>
 						<div class="header__menu-content">
-							<a class="header__menu-item header__menu-item_dropdown" href="#" onClick="toggleGeoDropout(this)">Санкт-Петербург</a>
+							<a class="header__menu-item header__menu-item_dropdown" href="#" onClick="toggleDropout(this)" data-class-dropout="header__geo-dropout">Санкт-Петербург</a>
 							<div class="header__geo-dropout dropout">
 								<div class="header__geo-dropout-item"><a href="javascript:void(0)">Москва</a></div>
 								<div class="header__geo-dropout-item"><a href="javascript:void(0)">Екатеринбург</a></div>
@@ -35,7 +35,7 @@
 							<a href="tel:84957305300" class="header__phone-link">8 495 730 53 00</a>
 							<div class="header__phone-text">Круглосуточно</div>
 						</div>
-						<a class="header__person header__person_dropdown" onClick="togglePersonDropout(this)">Богдан</a>
+						<a class="header__person header__person_dropdown" onClick="toggleDropout(this)" data-class-dropout="header__person-dropout">Богдан</a>
 						<div class="header__person-dropout dropout">
 							<div class="header__person-dropout-item"><a href="javascript:void(0)">Изменить профиль</a></div>
 							<div class="header__person-dropout-item"><a href="javascript:void(0)">Активировать сертификат</a></div>
@@ -53,7 +53,7 @@
 						<div class="header__logo-text">LOCAL<br><span>PHARM</span></div>
 					</a>
 					<div class="header__catalog">
-						<div class="header__catalog-title header__catalog-title_dropdown" onClick="toggleCatalogDropout(this)">Каталог</div>
+						<div class="header__catalog-title header__catalog-title_dropdown" onClick="toggleDropout(this)" data-class-dropout="header__catalog-content">Каталог</div>
 						<div class="header__catalog-content dropout">
 							<a class="header__catalog-item">Категория 1</a>
 							<a class="header__catalog-item">Категория 2</a>
