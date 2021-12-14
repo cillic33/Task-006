@@ -44,16 +44,7 @@
     }
 
     &__cart-count {
-        font-size: 14px;
-        font-weight: 500;
-        background: $default-link-color;
-        border-radius: 50%;
-        width: 21px; 
-        height: 21px;
-        color: #ffffff;
         margin: 0 0 0 8px;
-        text-align: center;
-        line-height: 1.5;
 
         @include max-screen($sm) {
             position: absolute;

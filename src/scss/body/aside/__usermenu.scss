@@ -38,20 +38,11 @@
         > a:first-child + a {
             display: flex;
             color: $default-link-color;
-
-            span {
-                width: 21px;
-                height: 21px;
-                display: block;
-                background: $default-link-color;
-                border-radius: 50%;
-                color: #fff;
-                text-align: center;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 1.5;
-                margin: 0 0 0 4px;
-            }
         }        
+    }
+
+    &__usermenu-count {
+        display: block;
+        margin: 0 0 0 4px;
     }
 }

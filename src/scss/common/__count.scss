@@ -1,0 +1,13 @@
+.common {
+    &__count {
+        width: 21px;
+        height: 21px;
+        color: #fff;
+        background: $default-link-color;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}
