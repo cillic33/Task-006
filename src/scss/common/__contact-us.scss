@@ -8,7 +8,7 @@
         padding: 0 0 0 28.76px;
 
         &::before {
-            content: url(../img/phone.svg);
+            content: url(../img/icons/icons.svg#phone);
             width: 18.76px;
             height: 18.72px;
             position: absolute;
@@ -19,7 +19,7 @@
             color: $default-link-color-hover;
 
             &::before {
-                content: url(../img/phone-hover.svg);
+                content: url(../img/icons/icons.svg#phone-hover);
             }
         }
     }

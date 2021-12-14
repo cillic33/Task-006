@@ -28,13 +28,13 @@
             display: inline-block;
             vertical-align: middle;
             margin: 0 0 0 13.5px;
-            background: url('../img/chevron-white-down.svg') no-repeat center;
+            background: url('../img/icons/icons.svg#chevron-white-down') no-repeat center;
             background-size: 12px;
         }
 
         &_active {
             &::after {
-                background: url('../img/chevron-white-up.svg') no-repeat center;
+                background: url('../img/icons/icons.svg#chevron-white-up') no-repeat center;
                 background-size: 12px;
             }
         }

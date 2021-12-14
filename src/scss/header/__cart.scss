@@ -10,6 +10,8 @@
     }
 
     &__cart-title {
+        display: flex;
+        align-items: center;
         font-size: 18px;
         font-weight: 500;
         color: $default-link-color;
@@ -19,13 +21,16 @@
         }
 
         &::before {
-            content: url('../img/cart-icon.svg');
+            content: url('../img/icons/icons.svg#cart-icon');
             display: inline-block;
             vertical-align: middle;
             padding: 0 10.18px 0 0;
+            width: 39.18px;
+            height: 33px;
 
             @include max-screen($sm) {
                 padding: 0;
+                width: 29px;
             }
         }
 
@@ -33,7 +38,7 @@
             color: $default-link-color-hover;
 
             &::before {
-                content: url('../img/cart-icon-hover.svg');
+                content: url('../img/icons/icons.svg#cart-icon-hover');
             }
         }
     }

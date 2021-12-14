@@ -32,42 +32,42 @@
         }
 
         &_dropdown {
-            background: url(../img/chevron-down-solid.svg) no-repeat right 24px top 5px;
+            background: url(../img/icons/icons.svg#chevron-down-solid) no-repeat right 24px top 5px;
             background-size: 10px;
             padding: 0 42px 0 0;
 
             @include max-screen($md) {
-                background: url(../img/chevron-down-solid.svg) no-repeat right 12px top 14px;
+                background: url(../img/icons/icons.svg#chevron-down-solid) no-repeat right 12px top 14px;
                 background-size: 10px;
                 padding: 10px 30px 10px 12px;
             }
 
             &:hover {
-                background: url(../img/chevron-down-solid-hover.svg) no-repeat right 24px top 5px;
+                background: url(../img/icons/icons.svg#chevron-down-solid-hover) no-repeat right 24px top 5px;
                 background-size: 10px;
 
                 @include max-screen($md) {
-                    background: $default-bg-hover url(../img/chevron-down-solid-hover.svg) no-repeat right 12px top 14px;
+                    background: $default-bg-hover url(../img/icons/icons.svg#chevron-down-solid-hover) no-repeat right 12px top 14px;
                     background-size: 10px;
                 }
             }
         }
 
         &_active {
-            background: url(../img/chevron-up-solid.svg) no-repeat right 24px top 5px;
+            background: url(../img/icons/icons.svg#chevron-up-solid) no-repeat right 24px top 5px;
             background-size: 10px;
 
             @include max-screen($md) {
-                background: url(../img/chevron-up-solid.svg) no-repeat right 12px top 14px;
+                background: url(../img/icons/icons.svg#chevron-up-solid) no-repeat right 12px top 14px;
                 background-size: 10px;
             }
 
             &:hover {
-                background: url(../img/chevron-up-solid-hover.svg) no-repeat right 24px top 5px;
+                background: url(../img/icons/icons.svg#chevron-up-solid-hover) no-repeat right 24px top 5px;
                 background-size: 10px;
 
                 @include max-screen($md) {
-                    background: $default-bg-hover url(../img/chevron-up-solid-hover.svg) no-repeat right 12px top 14px;
+                    background: $default-bg-hover url(../img/icons/icons.svg#chevron-up-solid-hover) no-repeat right 12px top 14px;
                     background-size: 10px;
                 }
             }
